@@ -10,16 +10,16 @@ public class DemoTest {
     @Test
     public void checkValidISBN(){
         ValidateISBN dt = new ValidateISBN();
-        boolean result = dt.checkISBN(140449116);
+        boolean result = dt.checkISBN("0140449116");
         Assert.assertTrue("First value",result);
-        result = dt.checkISBN(14077396);
+        result = dt.checkISBN("0140773961");
         Assert.assertTrue("Second value",result);
     }
 
     @Test
     public void checkAnInvalidISBN(){
         ValidateISBN dt = new ValidateISBN();
-        boolean result = dt.checkISBN(140449117);
+        boolean result = dt.checkISBN("0140449117");
         Assert.assertFalse(result);
     }
 }
